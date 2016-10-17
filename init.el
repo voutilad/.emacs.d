@@ -79,10 +79,22 @@
 (if (eq system-type 'darwin)
     (add-to-list 'my-packages 'exec-path-from-shell))
 
-(dolist (p my-packages)
-  (when (not (package-installed-p p))
-    (package-install p)))
+;;(dolist (p my-packages)
+;;  (when (not (package-installed-p p))
+;;    (package-install p)))
+;; xxxxxxxxxx
+(require 'cl-lib)
 
+(defun my/install-packages ()
+  "Ensure the packages I use are installed. See `my/packages'."
+  (interactive)
+  (let ((missing-packages (cl-remove-if #'package-installed-p my-packages)))
+    (when missing-packages
+      (message "Installing %d missing package(s)" (length missing-packages))
+      (package-refresh-contents)
+      (mapc #'package-install missing-packages))))
+
+(my/install-packages)
 
 ;; Place downloaded elisp files in ~/.emacs.d/vendor. You'll then be able
 ;; to load them.
@@ -92,7 +104,7 @@
 ;;
 ;; (require 'yaml-mode)
 ;; (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
-;; 
+;;
 ;; Adding this code will make Emacs enter yaml mode whenever you open
 ;; a .yml file
 (add-to-list 'load-path "~/.emacs.d/vendor")
