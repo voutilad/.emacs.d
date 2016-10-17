@@ -70,3 +70,6 @@
     (quit nil)))
 
 (setq electric-indent-mode nil)
+
+;; Remap right Command key to Meta
+(setq ns-right-command-modifier 'meta)
