@@ -65,6 +65,15 @@
     ;; edit html tags like sexps
     tagedit
 
+    ;; python baby 🐍
+    elpy
+
+    ;; emoji!
+    emojify
+
+    ;; material theme
+    material-theme
+
     ;; git integration
     magit))
 
@@ -117,6 +126,9 @@
 ;; Add a directory to our load path so that when you `load` things
 ;; below, Emacs knows where to look for the corresponding file.
 (add-to-list 'load-path "~/.emacs.d/customizations")
+
+;; enable elpy
+(elpy-enable)
 
 ;; Sets up exec-path-from-shell so that Emacs will use the correct
 ;; environment variables
