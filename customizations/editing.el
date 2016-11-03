@@ -75,3 +75,5 @@
 
 ;; Remap right Command key to Meta
 (setq ns-right-command-modifier 'meta)
+(setq ns-right-option-modifier 'super)
+
