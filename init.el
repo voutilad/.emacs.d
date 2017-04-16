@@ -75,7 +75,9 @@
     material-theme
 
     ;; git integration
-    magit))
+    magit
+
+    ivy))
 
 ;; On OS X, an Emacs instance started from the graphical user
 ;; interface will have a different environment than a shell in a
@@ -122,10 +124,10 @@
 ;;;;
 ;; Hy Mode
 ;;;;
-(add-to-list 'load-path "~/.emacs.d/manual")
-(require 'hy-mode)
-(add-hook 'hy-mode-hook 'paredit-mode)
-(add-hook 'hy-mode-hook #'rainbow-delimiters-mode)
+;;(add-to-list 'load-path "~/.emacs.d/manual")
+;;(require 'hy-mode)
+;;(add-hook 'hy-mode-hook 'paredit-mode)
+;;(add-hook 'hy-mode-hook #'rainbow-delimiters-mode)
 
 ;;;;
 ;; Customization
@@ -159,7 +161,7 @@
 ;; For editing lisps
 (load "elisp-editing.el")
 
-;; Langauage-specific
+;; Language-specific
 (load "setup-clojure.el")
 (load "setup-js.el")
 (custom-set-variables
