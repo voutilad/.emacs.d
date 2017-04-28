@@ -12,3 +12,6 @@ elpa/
 network-security.data
 emojis/
 elpa/archives
+eshell/
+elpa/archives/gnu/archive-contents
+elpa/*

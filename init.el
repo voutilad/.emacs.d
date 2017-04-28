@@ -159,6 +159,9 @@
 ;; These customizations make editing a bit nicer.
 (load "editing.el")
 
+;; Load orgmode settings and customzitions
+(load "orgmode.el")
+
 ;; Hard-to-categorize customizations
 (load "misc.el")
 
@@ -176,7 +179,7 @@
  '(coffee-tab-width 2)
  '(package-selected-packages
    (quote
-    (enh-ruby-mode cider-decompile tagedit smex rainbow-delimiters projectile paredit magit ido-ubiquitous exec-path-from-shell clojure-mode-extra-font-locking cider))))
+    (htmlize enh-ruby-mode cider-decompile tagedit smex rainbow-delimiters projectile paredit magit ido-ubiquitous exec-path-from-shell clojure-mode-extra-font-locking cider))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

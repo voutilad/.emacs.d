@@ -10,11 +10,3 @@
 
 ;; Go straight to scratch buffer on startup
 (setq inhibit-startup-message t)
-
-;; more org stuff
-(setq org-src-fontify-natively t)
-
-;; org Babel stuff
-(org-babel-do-load-languages
- 'org-babel-load-languages
- '((python . t)))
