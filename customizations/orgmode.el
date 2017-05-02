@@ -1,4 +1,9 @@
 ;; Settings for OrgMode
+(custom-set-variables
+ '(org-directory "~/org")
+ '(org-default-notes-file (concat org-directory "/notes.org"))
+ '(org-agenda-files (list org-directory))
+ '(org-clock-persist 'history))
 
 ;; more org stuff
 (setq org-src-fontify-natively t)
@@ -8,13 +13,11 @@
  'org-babel-load-languages
  '((python . t)))
 
-;; org files
-;; This no worky? (setq org-agenda-files '("~/org"))
-(setq org-agenda-files (file-expand-wildcards "~/org/*.org"))
-
 ;; keybindings
 (define-key global-map "\C-ca" 'org-agenda)
 
 ;; clockage
-(setq org-clock-persist 'history)
-     (org-clock-persistence-insinuate)
+(org-clock-persistence-insinuate)
+
+;; capture mode
+(define-key global-map "\C-cc" 'org-capture)

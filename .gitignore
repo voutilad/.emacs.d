@@ -12,13 +12,7 @@ elpa/
 network-security.data
 emojis/
 elpa/archives
-<<<<<<< HEAD
-elpa/archives/gnu/archive-contents
 eshell/
 elpa/
-archive-contents/
-=======
-eshell/
-elpa/archives/gnu/archive-contents
-elpa/*
->>>>>>> d76ecbd580115bf998ab1628eb3fdbb8b34991de
+.DS_Store
+elpa/**
