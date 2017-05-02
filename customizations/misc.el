@@ -2,3 +2,4 @@
 (setq inhibit-startup-message t)
 
 (display-battery-mode)
+
