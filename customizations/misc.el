@@ -18,3 +18,6 @@
 (org-babel-do-load-languages
  'org-babel-load-languages
  '((python . t)))
+
+;; usually we're on a laptop, soooo
+(display-battery-mode)
