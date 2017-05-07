@@ -68,3 +68,15 @@
 
 ;; no bell
 (setq ring-bell-function 'ignore)
+
+;; make sure line nums don't scale with the text size
+;; see: https://unix.stackexchange.com/a/146781
+(set-face-attribute 'linum nil :height 100)
+
+;; date and time
+(setq display-time-day-and-date t
+      display-time-24hr-format t)
+(display-time)
+
+;; column numbers are good, man
+(column-number-mode)
