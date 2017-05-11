@@ -171,15 +171,26 @@
 ;; Language-specific
 (load "setup-clojure.el")
 (load "setup-js.el")
+
+;; org-mode medium integration cloned from https://github.com/celadevra/org-medium
+(require 'org-sendto-medium)
+(condition-case nil
+    (load ".medium.el")
+  (message "Couldn't find .medium.el. Don't forget to set medium token!"))
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(coffee-tab-width 2)
+ '(org-agenda-files (list org-directory))
+ '(org-clock-persist (quote history))
+ '(org-default-notes-file (concat org-directory "/notes.org"))
+ '(org-directory "~/org")
  '(package-selected-packages
    (quote
-    (htmlize enh-ruby-mode cider-decompile tagedit smex rainbow-delimiters projectile paredit magit ido-ubiquitous exec-path-from-shell clojure-mode-extra-font-locking cider))))
+    (helm dumb-jump htmlize enh-ruby-mode cider-decompile tagedit smex rainbow-delimiters projectile paredit magit ido-ubiquitous exec-path-from-shell clojure-mode-extra-font-locking cider))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

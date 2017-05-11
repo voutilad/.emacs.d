@@ -16,3 +16,6 @@ eshell/
 elpa/
 .DS_Store
 elpa/**
+customizations/.medium.el
+games/
+url/
