@@ -3,3 +3,6 @@
 
 (display-battery-mode)
 
+;; Try using helm
+(require 'helm-config)
+
