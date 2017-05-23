@@ -15,3 +15,12 @@
 (autoload 'gfm-mode "markdown-mode"
    "Major mode for editing GitHub Flavored Markdown files" t)
 (add-to-list 'auto-mode-alist '("README\\.md\\'" . gfm-mode))
+
+;; Make Meta + MouseWheel change text scaling for easy zoomin'
+(global-set-key (kbd "<s-triple-wheel-down>") 'text-scale-decrease)
+(global-set-key (kbd "<s-triple-wheel-up>") 'text-scale-increase)
+(global-set-key (kbd "<s-double-wheel-down>") 'text-scale-decrease)
+(global-set-key (kbd "<s-double-wheel-up>") 'text-scale-increase)
+(global-set-key (kbd "<s-wheel-down>") 'text-scale-decrease)
+(global-set-key (kbd "<s-wheel-up>") 'text-scale-increase)
+
