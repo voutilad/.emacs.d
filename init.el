@@ -81,7 +81,17 @@
     markdown-mode
 
     ;; make html great again
-    web-mode))
+    web-mode
+
+    ;; on the fly syntax checking
+    flycheck
+
+    ;; i put on my robe and wizard hat
+    helm
+
+    ;; better js mode
+    websockets
+    js2-mode))
 
 ;; On OS X, an Emacs instance started from the graphical user
 ;; interface will have a different environment than a shell in a
