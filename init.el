@@ -90,7 +90,7 @@
     helm
 
     ;; better js mode
-    websockets
+    websocket
     js2-mode))
 
 ;; On OS X, an Emacs instance started from the graphical user
