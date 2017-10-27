@@ -15,7 +15,7 @@
 ;; syntax hilighting for midje
 (add-hook 'clojure-mode-hook
           (lambda ()
-            (setq inferior-lisp-program "lein repl")
+            ;;(setq inferior-lisp-program "lein repl")
             (font-lock-add-keywords
              nil
              '(("(\\(facts?\\)"
@@ -51,8 +51,8 @@
 ;; Use clojure mode for other extensions
 (add-to-list 'auto-mode-alist '("\\.edn$" . clojure-mode))
 (add-to-list 'auto-mode-alist '("\\.boot$" . clojure-mode))
-(add-to-list 'auto-mode-alist '("\\.cljs.*$" . clojure-mode))
-(add-to-list 'auto-mode-alist '("lein-env" . enh-ruby-mode))
+;;(add-to-list 'auto-mode-alist '("\\.cljs.*$" . clojure-mode))
+;;(add-to-list 'auto-mode-alist '("lein-env" . enh-ruby-mode))
 
 
 ;; key bindings
