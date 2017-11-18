@@ -5,7 +5,7 @@
 ;; preferences
 
 ;; Turn off the menu bar at the top of each frame because it's distracting
-;; (menu-bar-mode -1)
+(menu-bar-mode -1)
 
 ;; Show line numbers
 (global-linum-mode)
@@ -29,8 +29,11 @@
 ;; (load-theme 'tomorrow-night-bright t)
 (load-theme 'material t)
 
+(set-face-attribute 'default nil :font "DejaVu Sans Mono-8")
+(set-frame-font "DejaVu Sans Mono-8" nil t)
+
 ;; increase font size for better readability
-(set-face-attribute 'default nil :height 120)
+;;(set-face-attribute 'default nil :height 100)
 
 ;; Uncomment the lines below by removing semicolons and play with the
 ;; values in order to set the width (in characters wide) and height
@@ -59,7 +62,7 @@
 
 ;; No cursor blinking, it's distracting
 (blink-cursor-mode 0)
-
+(setq-default x-stretch-cursor t )
 ;; full path in title bar
 (setq-default frame-title-format "%b (%f)")
 
@@ -71,7 +74,7 @@
 
 ;; make sure line nums don't scale with the text size
 ;; see: https://unix.stackexchange.com/a/146781
-(set-face-attribute 'linum nil :height 100)
+(set-face-attribute 'linum nil :height 80)
 
 ;; date and time
 (setq display-time-day-and-date t

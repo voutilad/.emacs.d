@@ -40,8 +40,8 @@
     websocket
     js2-mode))
 
-(if (eq system-type 'darwin)
-    (add-to-list 'my-packages 'exec-path-from-shell))
+;;(if (eq system-type 'darwin)
+;;    (add-to-list 'my-packages 'exec-path-from-shell))
 
 (require 'cl-lib)
 
@@ -66,7 +66,7 @@
 
 ;; Sets up exec-path-from-shell so that Emacs will use the correct
 ;; environment variables
-(load "shell-integration.el")
+;; (load "shell-integration.el")
 
 ;; These customizations make it easier for you to navigate files,
 ;; switch buffers, and choose options from the minibuffer.
@@ -91,7 +91,7 @@
 ;; Language-specific
 (load "setup-clojure.el")
 (load "setup-js.el")
-(load "setup-haskell.el")
+;;(load "setup-haskell.el")
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -99,17 +99,16 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(coffee-tab-width 2)
+ '(custom-safe-themes
+   (quote
+    ("653574dd35a64b45030075c99bb9e73f26d8abc7f21e145321e64fa2659fb6f5" default)))
  '(org-agenda-files (list org-directory))
  '(org-clock-persist (quote history))
  '(org-default-notes-file (concat org-directory "/notes.org"))
  '(org-directory "~/org")
- '(haskell-process-suggest-remove-import-lines t)
- '(haskell-process-auto-import-loaded-modules t)
- ;;'(haskell-process-type (quote stack-ghci))
- '(haskell-process-log t)
  '(package-selected-packages
    (quote
-    (haskell-mode flycheck smex js2-mode websocket indium yaml-mode helm dumb-jump htmlize cider-decompile tagedit rainbow-delimiters projectile paredit magit ido-ubiquitous exec-path-from-shell clojure-mode-extra-font-locking cider))))
+    (silkworm-theme flycheck smex js2-mode websocket indium yaml-mode helm dumb-jump htmlize cider-decompile tagedit rainbow-delimiters projectile paredit magit ido-ubiquitous clojure-mode-extra-font-locking cider))))
 
 
 (custom-set-faces
