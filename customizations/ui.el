@@ -29,11 +29,11 @@
 ;; (load-theme 'tomorrow-night-bright t)
 (load-theme 'material t)
 
-(set-face-attribute 'default nil :font "DejaVu Sans Mono-8")
-(set-frame-font "DejaVu Sans Mono-8" nil t)
+(set-face-attribute 'default nil :font "DejaVu Sans Mono")
+(set-frame-font "DejaVu Sans Mono" nil t)
 
 ;; increase font size for better readability
-;;(set-face-attribute 'default nil :height 100)
+(set-face-attribute 'default nil :height 60)
 
 ;; Uncomment the lines below by removing semicolons and play with the
 ;; values in order to set the width (in characters wide) and height
@@ -42,10 +42,10 @@
 
 ;; These settings relate to how emacs interacts with your operating system
 (setq ;; makes killing/yanking interact with the clipboard
-      x-select-enable-clipboard t
+      select-enable-clipboard t
 
       ;; I'm actually not sure what this does but it's recommended?
-      x-select-enable-primary t
+      select-enable-primary t
 
       ;; Save clipboard strings into kill ring before replacing them.
       ;; When one selects something in another program to paste it into Emacs,
@@ -74,7 +74,7 @@
 
 ;; make sure line nums don't scale with the text size
 ;; see: https://unix.stackexchange.com/a/146781
-(set-face-attribute 'linum nil :height 80)
+(set-face-attribute 'linum nil :height 50)
 
 ;; date and time
 (setq display-time-day-and-date t
