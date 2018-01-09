@@ -24,3 +24,6 @@
 (global-set-key (kbd "<s-wheel-down>") 'text-scale-decrease)
 (global-set-key (kbd "<s-wheel-up>") 'text-scale-increase)
 
+;; fix issues with gpg2 pinentry on OpenBSD, allowing prompts in the
+;; emacs minibuffer
+(setq epa-pinentry-mode 'loopback)

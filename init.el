@@ -5,7 +5,7 @@
 ;; Define package repositories
 (require 'package)
 (add-to-list 'package-archives
-             '("melpa-stable" . "https://stable.melpa.org/packages/") t)
+             '("melpa" . "https://melpa.org/packages/") t)
 
 (package-initialize)
 
@@ -102,6 +102,7 @@
  '(custom-safe-themes
    (quote
     ("653574dd35a64b45030075c99bb9e73f26d8abc7f21e145321e64fa2659fb6f5" default)))
+ '(doc-view-resolution (* 176 2))
  '(org-agenda-files (list org-directory))
  '(org-clock-persist (quote history))
  '(org-default-notes-file (concat org-directory "/notes.org"))
