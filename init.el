@@ -93,6 +93,9 @@
 (load "setup-js.el")
 ;;(load "setup-haskell.el")
 
+;; emailz
+(load "mu4e-config.el")
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -109,7 +112,8 @@
  '(org-directory "~/org")
  '(package-selected-packages
    (quote
-    (silkworm-theme flycheck smex js2-mode websocket indium yaml-mode helm dumb-jump htmlize cider-decompile tagedit rainbow-delimiters projectile paredit magit ido-ubiquitous clojure-mode-extra-font-locking cider))))
+    (silkworm-theme flycheck smex js2-mode websocket indium yaml-mode helm dumb-jump htmlize cider-decompile tagedit rainbow-delimiters projectile paredit magit ido-ubiquitous clojure-mode-extra-font-locking cider)))
+ '(send-mail-function (quote sendmail-send-it)))
 
 
 (custom-set-faces

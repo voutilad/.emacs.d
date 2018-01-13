@@ -27,3 +27,14 @@
 ;; fix issues with gpg2 pinentry on OpenBSD, allowing prompts in the
 ;; emacs minibuffer
 (setq epa-pinentry-mode 'loopback)
+
+;; Open links in Chrome. For some reason emacs is dumb and thinks
+;; the chrome executable is named something other than just 'chrome'
+(require 'browse-url)
+(setq browse-url-chrome-program
+      (let ((candidates '("chrome" "google-chrome-stable" "google-chrome")))
+        (while (and candidates (not (executable-find (car candidates))))
+          (setq candidates (cdr candidates)))
+        (or (car candidates) "chromium")))
+
+(setq browse-url-browser-function 'browse-url-chrome)

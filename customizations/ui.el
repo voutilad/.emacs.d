@@ -29,11 +29,15 @@
 ;; (load-theme 'tomorrow-night-bright t)
 (load-theme 'material t)
 
-(set-face-attribute 'default nil :font "DejaVu Sans Mono")
-(set-frame-font "DejaVu Sans Mono" nil t)
+(set-face-attribute 'default nil :font "Hack" :height 80)
+(set-frame-font "Hack" nil t)
+
+;; make sure line nums don't scale with the text size
+;; see: https://unix.stackexchange.com/a/146781
+(set-face-attribute 'linum nil :height 60)
 
 ;; increase font size for better readability
-(set-face-attribute 'default nil :height 60)
+;;(set-face-attribute 'default nil :height 60)
 
 ;; Uncomment the lines below by removing semicolons and play with the
 ;; values in order to set the width (in characters wide) and height
@@ -71,10 +75,6 @@
 
 ;; no bell
 (setq ring-bell-function 'ignore)
-
-;; make sure line nums don't scale with the text size
-;; see: https://unix.stackexchange.com/a/146781
-(set-face-attribute 'linum nil :height 50)
 
 ;; date and time
 (setq display-time-day-and-date t
