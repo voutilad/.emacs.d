@@ -38,3 +38,7 @@
         (or (car candidates) "chromium")))
 
 (setq browse-url-browser-function 'browse-url-chrome)
+
+; hail satan
+(require 'evil)
+(evil-mode t)

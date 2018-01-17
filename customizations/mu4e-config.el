@@ -7,7 +7,7 @@
       mu4e-compose-signature (concat "Dave\n"))
 
 (setq mu4e-get-mail-command "mbsync gmail sisu")
-(setq mu4e-update-interval 300)
+;;(setq mu4e-update-interval 300)
 
 ;;;; fancybois
 ;; use 'fancy' non-ascii characters in various places in mu4e
@@ -22,7 +22,16 @@
   (imagemagick-register-types))
 
 ;; support adding a prompt to view email in browser
-(add-to-list 'mu4e-view-actions '("View in browser" . mu4e-action-view-in-browser) t)
+(add-to-list 'mu4e-view-actions
+             '("View in chrome" . mu4e-action-view-in-browser) t)
+
+
+;; let's pop pdf's in mupdf
+(defun open-with-mupdf (msg attachnum)
+  "Open a mail attachment with mupdf"
+  (mu4e-view-open-attachment-with msg attachnum "mupdf"))
+(add-to-list 'mu4e-view-attachment-actions
+             '("mview in mupdf" . open-with-mupdf) t)
 
 ;; email autofetch
 (setq mu4e-update-interval 300)
@@ -55,3 +64,46 @@
                       (concat "Dave Voutila\n"
                               "+1 617-538-2151\n"
                               "Sisu Integrated Services, LLC\n"))))))
+
+;; bookmarks make the world go round
+(add-to-list 'mu4e-bookmarks
+  (make-mu4e-bookmark
+    :name  "Work Email"
+    :query "to:dave@sisu.io"
+    :key ?w))
+(add-to-list 'mu4e-bookmarks
+  (make-mu4e-bookmark
+    :name  "Personal Email"
+    :query "to:voutilad@gmail.com"
+    :key ?p))
+(add-to-list 'mu4e-bookmarks
+  (make-mu4e-bookmark
+    :name  "OpenBSD lists"
+    :query "list:tech@openbsd.org OR list:misc@openbsd.org OR list:ports@openbsd.org"
+    :key ?o))
+
+(setq mu4e-bookmarks
+      `( ,(make-mu4e-bookmark
+        :name  "Unread messages"
+        :query "flag:unread AND NOT flag:trashed"
+        :key ?u)
+     ,(make-mu4e-bookmark
+        :name "Today's messages"
+        :query "date:today..now"
+        :key ?t)
+     ,(make-mu4e-bookmark
+       :name  "Work Email"
+       :query "to:dave@sisu.io"
+       :key ?w)
+     ,(make-mu4e-bookmark
+       :name  "Personal Email"
+       :query "to:voutilad@gmail.com"
+       :key ?p)
+     ,(make-mu4e-bookmark
+       :name  "JCGoogle"
+       :query "to:jcgoogle@googlegroups.com"
+       :key ?g)
+     ,(make-mu4e-bookmark
+       :name  "OpenBSD"
+       :query "list:tech@openbsd.org OR list:misc@openbsd.org OR list:ports@openbsd.org"
+       :key ?o)))

@@ -77,3 +77,5 @@
 (setq ns-right-command-modifier 'meta)
 (setq ns-right-option-modifier 'super)
 
+;; screw line nums in term
+(add-hook 'term-mode-hook (lambda () (linum-mode 0)))

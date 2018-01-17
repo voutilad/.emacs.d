@@ -20,17 +20,17 @@
   (scroll-bar-mode -1))
 
 ;; Color Themes
-;; Read http://batsov.com/articles/2012/02/19/color-theming-in-emacs-reloaded/
-;; for a great explanation of emacs color themes.
-;; https://www.gnu.org/software/emacs/manual/html_node/emacs/Custom-Themes.html
-;; for a more technical explanation.
-;; (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
-;; (add-to-list 'load-path "~/.emacs.d/themes")
-;; (load-theme 'tomorrow-night-bright t)
-(load-theme 'material t)
+;;(require 'hydandata-light-theme)
+(load-theme 'hydandata-light)
+;; (require 'nord-theme)
+;; (setq nord-uniform-mode-lines t)
+;; (setq nord-comment-brightness 20)
+;; (load-theme 'nord t)
 
-(set-face-attribute 'default nil :font "Hack" :height 80)
-(set-frame-font "Hack" nil t)
+;(set-face-attribute 'default nil :font "Source Code Pro for Powerline" :height 70)
+;(set-frame-font "Source Code Pro for Powerline" nil t)
+(set-face-attribute 'default nil :font "DejaVu Sans Mono for Powerline Book" :height 70)
+(set-frame-font "DejaVu Sans Mono for Powerline Book" nil t)
 
 ;; make sure line nums don't scale with the text size
 ;; see: https://unix.stackexchange.com/a/146781
@@ -45,24 +45,24 @@
 ;; (setq initial-frame-alist '((top . 0) (left . 0) (width . 150) (height . 40)))
 
 ;; These settings relate to how emacs interacts with your operating system
-(setq ;; makes killing/yanking interact with the clipboard
-      select-enable-clipboard t
+;(setq ;; makes killing/yanking interact with the clipboard
+;      select-enable-clipboard t
 
       ;; I'm actually not sure what this does but it's recommended?
-      select-enable-primary t
+;      select-enable-primary t
 
       ;; Save clipboard strings into kill ring before replacing them.
       ;; When one selects something in another program to paste it into Emacs,
       ;; but kills something in Emacs before actually pasting it,
       ;; this selection is gone unless this variable is non-nil
-      save-interprogram-paste-before-kill t
+ ;     save-interprogram-paste-before-kill t
 
       ;; Shows all options when running apropos. For more info,
       ;; https://www.gnu.org/software/emacs/manual/html_node/emacs/Apropos.html
-      apropos-do-all t
+ ;     apropos-do-all t
 
       ;; Mouse yank commands yank at point instead of at click.
-      mouse-yank-at-point t)
+ ;     mouse-yank-at-point t)
 
 ;; No cursor blinking, it's distracting
 (blink-cursor-mode 0)

@@ -96,6 +96,9 @@
 ;; emailz
 (load "mu4e-config.el")
 
+;; fix some line number issues
+(load "linum-off.el")
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -104,15 +107,16 @@
  '(coffee-tab-width 2)
  '(custom-safe-themes
    (quote
-    ("653574dd35a64b45030075c99bb9e73f26d8abc7f21e145321e64fa2659fb6f5" default)))
+    ("c5a886cc9044d8e6690a60f33db45506221aa0777a82ad1f7fe11a96d203fa44" "7527f3308a83721f9b6d50a36698baaedc79ded9f6d5bd4e9a28a22ab13b3cb1" "653574dd35a64b45030075c99bb9e73f26d8abc7f21e145321e64fa2659fb6f5" default)))
  '(doc-view-resolution (* 176 2))
+ '(excorporate-configuration "dave.voutila@perkinelmer.com")
  '(org-agenda-files (list org-directory))
  '(org-clock-persist (quote history))
  '(org-default-notes-file (concat org-directory "/notes.org"))
  '(org-directory "~/org")
  '(package-selected-packages
    (quote
-    (silkworm-theme flycheck smex js2-mode websocket indium yaml-mode helm dumb-jump htmlize cider-decompile tagedit rainbow-delimiters projectile paredit magit ido-ubiquitous clojure-mode-extra-font-locking cider)))
+    (hydandata-light-theme nord-theme silkworm-theme flycheck smex js2-mode websocket indium yaml-mode helm dumb-jump htmlize cider-decompile tagedit rainbow-delimiters projectile paredit magit ido-ubiquitous clojure-mode-extra-font-locking cider)))
  '(send-mail-function (quote sendmail-send-it)))
 
 
@@ -121,4 +125,4 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(default ((t (:inherit nil :stipple nil :background "#f8f8ff" :foreground "black" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :width normal :bold nil)))))
