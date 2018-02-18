@@ -6,6 +6,7 @@
 
 ;; Turn off the menu bar at the top of each frame because it's distracting
 (menu-bar-mode -1)
+(toggle-frame-fullscreen)
 
 ;; Show line numbers
 (global-linum-mode)
@@ -21,16 +22,24 @@
 
 ;; Color Themes
 ;;(require 'hydandata-light-theme)
-(load-theme 'hydandata-light)
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
+;; (load-theme 'greymatters t)
+(load-theme 'material t)
+;; Fix evil mode colors and cursors
+(require 'evil)
+(setq evil-insert-state-cursor '("#ff8700" box))
+;;(setq evil-normal-state-cursor '("#5f00af" box))
+(setq evil-normal-state-cursor '("#dddd00" box))
+
 ;; (require 'nord-theme)
 ;; (setq nord-uniform-mode-lines t)
 ;; (setq nord-comment-brightness 20)
 ;; (load-theme 'nord t)
 
-;(set-face-attribute 'default nil :font "Source Code Pro for Powerline" :height 70)
+(set-face-attribute 'default nil :font "Source Code Pro for Powerline" :height 70)
 ;(set-frame-font "Source Code Pro for Powerline" nil t)
-(set-face-attribute 'default nil :font "DejaVu Sans Mono for Powerline Book" :height 70)
-(set-frame-font "DejaVu Sans Mono for Powerline Book" nil t)
+;(set-face-attribute 'default nil :font "DejaVu Sans Mono for Powerline" :height 70)
+(set-frame-font "DejaVu Sans Mono for Powerline" nil t)
 
 ;; make sure line nums don't scale with the text size
 ;; see: https://unix.stackexchange.com/a/146781
