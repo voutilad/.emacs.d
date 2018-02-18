@@ -25,6 +25,8 @@
 (add-to-list 'mu4e-view-actions
              '("View in chrome" . mu4e-action-view-in-browser) t)
 
+;; gmail keeps copies so we don't need to store them locally
+(setq mu4e-sent-messages-behavior 'delete)
 
 ;; let's pop pdf's in mupdf
 (defun open-with-mupdf (msg attachnum)
