@@ -6,7 +6,7 @@
 
 ;; Turn off the menu bar at the top of each frame because it's distracting
 (menu-bar-mode -1)
-(toggle-frame-fullscreen)
+(toggle-frame-maximized)
 
 ;; Show line numbers
 (global-linum-mode)
@@ -21,14 +21,11 @@
   (scroll-bar-mode -1))
 
 ;; Color Themes
-;;(require 'hydandata-light-theme)
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
-;; (load-theme 'greymatters t)
 (load-theme 'material t)
 ;; Fix evil mode colors and cursors
 (require 'evil)
 (setq evil-insert-state-cursor '("#ff8700" box))
-;;(setq evil-normal-state-cursor '("#5f00af" box))
 (setq evil-normal-state-cursor '("#dddd00" box))
 
 ;; (require 'nord-theme)
@@ -36,22 +33,18 @@
 ;; (setq nord-comment-brightness 20)
 ;; (load-theme 'nord t)
 
-(set-face-attribute 'default nil :font "Source Code Pro for Powerline" :height 70)
+(require 'powerline)
+(require 'powerline-evil)
+(powerline-evil-center-color-theme)
+
+;(set-face-attribute 'default nil :font "Source Code Pro for Powerline" :height 120)
 ;(set-frame-font "Source Code Pro for Powerline" nil t)
-;(set-face-attribute 'default nil :font "DejaVu Sans Mono for Powerline" :height 70)
+(set-face-attribute 'default nil :font "DejaVu Sans Mono for Powerline" :height 120)
 (set-frame-font "DejaVu Sans Mono for Powerline" nil t)
 
 ;; make sure line nums don't scale with the text size
 ;; see: https://unix.stackexchange.com/a/146781
-(set-face-attribute 'linum nil :height 60)
-
-;; increase font size for better readability
-;;(set-face-attribute 'default nil :height 60)
-
-;; Uncomment the lines below by removing semicolons and play with the
-;; values in order to set the width (in characters wide) and height
-;; (in lines high) Emacs will have whenever you start it
-;; (setq initial-frame-alist '((top . 0) (left . 0) (width . 150) (height . 40)))
+(set-face-attribute 'linum nil :height 120)
 
 ;; These settings relate to how emacs interacts with your operating system
 ;(setq ;; makes killing/yanking interact with the clipboard
@@ -86,9 +79,9 @@
 (setq ring-bell-function 'ignore)
 
 ;; date and time
-(setq display-time-day-and-date t
-      display-time-24hr-format t)
-(display-time)
+;; (setq display-time-day-and-date t
+;;       display-time-24hr-format t)
+;; (display-time)
 
 ;; column numbers are good, man
 (column-number-mode)

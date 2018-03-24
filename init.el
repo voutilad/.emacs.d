@@ -40,7 +40,10 @@
     helm
 
     websocket
-    js2-mode))
+    js2-mode
+
+    powerline
+    powerline-evil))
 
 ;;(if (eq system-type 'darwin)
 ;;    (add-to-list 'my-packages 'exec-path-from-shell))
@@ -113,7 +116,7 @@
  '(org-directory "~/org")
  '(package-selected-packages
    (quote
-    (js-comint elpy ## greymatters-theme gruvbox-theme company anti-zenburn-theme solarized-theme hydandata-light-theme flycheck smex js2-mode websocket indium yaml-mode helm dumb-jump htmlize cider-decompile tagedit rainbow-delimiters projectile paredit magit ido-completing-read+ clojure-mode-extra-font-locking cider)))
+    (org-bullets powerline-evil powerline company-jedi js-comint elpy ## greymatters-theme gruvbox-theme company anti-zenburn-theme solarized-theme hydandata-light-theme flycheck smex js2-mode websocket indium yaml-mode helm dumb-jump htmlize cider-decompile tagedit rainbow-delimiters projectile paredit magit ido-completing-read+ clojure-mode-extra-font-locking cider)))
  '(send-mail-function (quote sendmail-send-it)))
 
 ;; These customizations change the way emacs looks and disable/enable

@@ -7,7 +7,7 @@
       mu4e-compose-signature (concat "Dave\n"))
 
 (setq mu4e-get-mail-command "mbsync gmail sisu")
-;;(setq mu4e-update-interval 300)
+(setq mu4e-update-interval 300)
 
 ;;;; fancybois
 ;; use 'fancy' non-ascii characters in various places in mu4e
@@ -68,44 +68,51 @@
                               "Sisu Integrated Services, LLC\n"))))))
 
 ;; bookmarks make the world go round
-(add-to-list 'mu4e-bookmarks
-  (make-mu4e-bookmark
-    :name  "Work Email"
-    :query "to:dave@sisu.io"
-    :key ?w))
-(add-to-list 'mu4e-bookmarks
-  (make-mu4e-bookmark
-    :name  "Personal Email"
-    :query "to:voutilad@gmail.com"
-    :key ?p))
-(add-to-list 'mu4e-bookmarks
-  (make-mu4e-bookmark
-    :name  "OpenBSD lists"
-    :query "list:tech@openbsd.org OR list:misc@openbsd.org OR list:ports@openbsd.org"
-    :key ?o))
+;; (add-to-list 'mu4e-bookmarks
+;;   (make-mu4e-bookmark
+;;     :name  "Work Email"
+;;     :query "to:dave@sisu.io"
+;;     :key ?w))
+;; (add-to-list 'mu4e-bookmarks
+;;   (make-mu4e-bookmark
+;;     :name  "Personal Email"
+;;     :query "to:voutilad@gmail.com"
+;;     :key ?p))
+;; (add-to-list 'mu4e-bookmarks
+;;   (make-mu4e-bookmark
+;;     :name  "Personal Trash"
+;;     :query "flag:trashed and to:voutilad@gmail.com"
+;;     :key ?o))
+;; (add-to-list 'mu4e-bookmarks
+;;   (make-mu4e-bookmark
+;;     :name "Personal Trash"
+;;     :query "to:voutilad@gmail.com AND flag:trashed"
+;;     :key ?t))
+
 
 (setq mu4e-bookmarks
-      `( ,(make-mu4e-bookmark
-        :name  "Unread messages"
-        :query "flag:unread AND NOT flag:trashed"
-        :key ?u)
-     ,(make-mu4e-bookmark
-        :name "Today's messages"
-        :query "date:today..now"
-        :key ?t)
-     ,(make-mu4e-bookmark
-       :name  "Work Email"
-       :query "to:dave@sisu.io"
-       :key ?w)
-     ,(make-mu4e-bookmark
-       :name  "Personal Email"
-       :query "to:voutilad@gmail.com"
-       :key ?p)
-     ,(make-mu4e-bookmark
-       :name  "JCGoogle"
-       :query "to:jcgoogle@googlegroups.com"
-       :key ?g)
-     ,(make-mu4e-bookmark
-       :name  "OpenBSD"
-       :query "list:tech@openbsd.org OR list:misc@openbsd.org OR list:ports@openbsd.org"
-       :key ?o)))
+       `( ,(make-mu4e-bookmark
+         :name  "Unread messages"
+         :query "flag:unread AND NOT flag:trashed"
+         :key ?u)
+      ,(make-mu4e-bookmark
+         :name "Today's messages"
+         :query "date:today..now"
+         :key ?t)
+      ,(make-mu4e-bookmark
+        :name  "Work Email"
+        :query "to:dave@sisu.io"
+        :key ?w)
+      ,(make-mu4e-bookmark
+        :name  "Personal Email"
+        :query "to:voutilad@gmail.com"
+        :key ?p)
+      ,(make-mu4e-bookmark
+        :name  "JCGoogle"
+        :query "to:jcgoogle@googlegroups.com"
+        :key ?g)
+      ,(make-mu4e-bookmark
+        :name "Personal Trash"
+        :query "to:voutilad@gmail.com AND flag:trashed"
+        :key ?t)))
+
